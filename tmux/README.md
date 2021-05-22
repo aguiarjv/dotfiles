@@ -8,7 +8,8 @@ Add this to your .bashrc file:
 
 ```
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  tmux a -t default || exec tmux new -s default && exit;
+  #exec tmux;
+  tmux a -t 0 || exec tmux new -s 0 && exit;
 fi
 ```
 
