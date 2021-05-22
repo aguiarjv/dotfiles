@@ -123,6 +123,9 @@ set background=dark
 
 inoremap <C-c> <esc>
 
+" Binding increment to Ctrl-S
+nnoremap <C-s> <C-a>
+
 " Unbinding Ctrl-A so we can use it as tmux prefix key
 map <C-a> <Nop>
 map g<C-a> <Nop>
