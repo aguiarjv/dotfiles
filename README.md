@@ -4,6 +4,8 @@ Here I'll be saving and updating my current linux setup files and info.
 
 ### What do I use?
 
+* font: Roboto Mono Medium 12
+
 * neovim
 
 * tmux
