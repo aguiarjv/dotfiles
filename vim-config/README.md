@@ -3,8 +3,8 @@
 This is my init.vim (now using nvim) file for general use.
 
 Things to remember when using it:
-* If using VIM: rename it to .vimrc and place it in the home directory (~) 
-* If you're using neovim: rename it to init.vim and place it at:
+* If using **vim**: rename it to **.vimrc** and place it in the **home directory (~)** 
+* If you're using **neovim**: rename it to **init.vim** and place it at:
     ```
     $ ~/.config/nvim/
     ``` 
