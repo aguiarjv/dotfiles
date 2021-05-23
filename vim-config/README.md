@@ -21,8 +21,6 @@ Things to remember when using it:
 * Also install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 
 
-The Vim Cheat Sheets directory has some .pdf files to help study VIM
-
 .vimrc was inspired on [ThePrimeagen YouTube video](https://www.youtube.com/watch?v=n9k9scbTuvQ)
 
 Also check [this video](https://www.youtube.com/watch?v=q7gr6s8skt0) on Search and Replace using :CocSearch and macros to change several lines in different files!
