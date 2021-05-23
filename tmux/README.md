@@ -1,6 +1,11 @@
 # TMUX Configuration
 
 This is my tmux configurations. They are very simple and basic.
+The configuration file should be added to your home directory.
+
+```
+$ ~/
+```
 
 ### tmux on startup
 
