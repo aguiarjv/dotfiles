@@ -3,8 +3,15 @@
 This is my init.vim (now using nvim) file for general use.
 
 Things to remember when using it:
-* Rename it to .vimrc(\~) or init.vim(\~/.config/nvim/)
-* Create a directory called undodir at ~/.vim/undodir
+* If using VIM: rename it to .vimrc and place it in the home directory (~) 
+* If you're using neovim: rename it to init.vim and place it at:
+    ```
+    $ ~/.config/nvim/
+    ``` 
+* Create a directory called undodir at
+    ```
+    $ ~/.vim/undodir
+    ``` 
 * It uses [vim plug](https://github.com/junegunn/vim-plug) as the plugin manager
 * After setting up the file, run :PluginInstall at vim command mode
 * Some programs are needed:
