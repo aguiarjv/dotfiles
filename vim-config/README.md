@@ -13,7 +13,7 @@ Things to remember when using it:
     $ ~/.vim/undodir
     ``` 
 * It uses [vim plug](https://github.com/junegunn/vim-plug) as the plugin manager
-* After setting up the file, run :PluginInstall at vim command mode
+* After setting up the file, run ***:PluginInstall*** at vim command mode
 * Some programs are needed:
     ```
     sudo apt install ripgrep fzf nodejs zsh
