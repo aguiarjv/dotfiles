@@ -14,10 +14,10 @@ Here I'll be saving and updating my current linux setup files and info.
 
 * i3 wm
 
-### Installation Script
+### Installation Script (Ubuntu)
 
 I made a very simple [installion script](https://github.com/aguiarjv/Linux-Configs/blob/main/setup-install.sh) to setup everything as it should be.<br />
-Just download it and then run (**careful: it will overwrite some files**):
+Just download it and then run (**careful: it might overwrite some files**):
 
 ```
 $ bash setup-install.sh
