@@ -30,8 +30,7 @@ I use **Ctrl+a** as the bind-key.
   - **n** next window
   - **p** previous window
   - **&** kill window
-<br />
-<br />
+
 * **x** kills a pane
 
 * **\<num>** goes to window \<num>
@@ -81,8 +80,7 @@ Pressing **bind-key + [** places us in Copy mode. We can then use our movement k
 * Personal changes:
   - **v** begin-selection
   - **y** copy pipe and cancel
-<br />
-<br />
+
 >#### Personal Shortcuts
 
 * **Shift+c** create new window and name it
@@ -99,8 +97,7 @@ Pressing **bind-key + [** places us in Copy mode. We can then use our movement k
   - **j** down
   - **k** up
   - **l** right
-<br />
-<br />
+
 * folder cd binding:
   - **Shift+w** windows folder
   - **Shift+b** backup folder
