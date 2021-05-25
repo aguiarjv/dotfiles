@@ -17,7 +17,7 @@ Here I'll be saving and updating my current linux setup files and info.
 ### Installation Script
 
 I made a very simple [installion script](https://github.com/aguiarjv/Linux-Configs/blob/main/setup-install.sh) to setup everything as it should be.<br />
-Just download it and then:
+Just download it and then run (careful: it will overwrite some files):
 
 ```
 $ bash setup-install.sh
