@@ -52,7 +52,7 @@ To get all the information you need about the partitions available on your syste
 $ lsblk -o NAME,SIZE,TYPE,FSTYPE,UUID
 ```
 
-To have write access to 'ntfs' file system you should install the **'ntfs-3g' package. <br />
+To have **write access to 'ntfs'** file system you should install the **'ntfs-3g' package**. <br />
 
 To grant all users access to '/dev/sdb1', which will be located at '/media/victor/backup', and is of type 'ntfs' the line would be:
 
