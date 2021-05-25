@@ -31,15 +31,13 @@ I use the default i3 mod key: **alt**.
     - **mod+s** stacking
     - **mod+w** tabbed
     - **mod+e** toggle split
-<br />
-<br />
+
 * change focus:
     - **mod+h** left
     - **mod+j** down
     - **mod+k** up
     - **mod+l** right
-<br />
-<br />
+
 * move focused window:
     - **mod+Shift+h** left
     - **mod+Shift+j** down
