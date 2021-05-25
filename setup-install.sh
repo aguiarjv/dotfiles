@@ -27,13 +27,13 @@ sudo apt install ranger feh -y
 # Downloading config files from github
 
 # dotfiles
-wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/dotfiles/aliases
+wget --no-check-certificate --content-disposition -O aliases https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/dotfiles/aliases
 mv -f aliases ~/dotfiles/personal/
 
-wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/dotfiles/monitor
+wget --no-check-certificate --content-disposition -O monitor https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/dotfiles/monitor
 mv -f monitor ~/dotfiles/personal
 
-wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/dotfiles/tmux
+wget --no-check-certificate --content-disposition -O tmux https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/dotfiles/tmux
 mv -f tmux ~/dotfiles/personal
 
 # i3 config and i3 status
@@ -44,12 +44,12 @@ wget --no-check-certificate --content-disposition https://raw.githubusercontent.
 mv -f i3status ~/.config/i3status/config
 
 # tmux config
-wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/tmux/.tmux.conf
+wget --no-check-certificate --content-disposition -O .tmux.conf https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/tmux/.tmux.conf
 mv -f .tmux.conf ~/
 
 # nvim init and coc-settings
 wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/vim-config/myconfig.vim
 mv -f myconfig.vim ~/.config/nvim/init.vim
 
-wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/vim-config/coc-settings/coc-settings.json
+wget --no-check-certificate --content-disposition -O coc-settings.json https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/vim-config/coc-settings/coc-settings.json
 mv -f coc-settings.json ~/.config/nvim/
