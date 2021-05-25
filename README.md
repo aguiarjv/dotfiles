@@ -16,14 +16,14 @@ Here I'll be saving and updating my current linux setup files and info.
 
 ### Installation Script
 
-I made a very simple [installion script]() to setup everything as it should be.<br />
+I made a very simple [installion script](https://github.com/aguiarjv/Linux-Configs/blob/main/setup-install.sh) to setup everything as it should be.<br />
 Just download it and then:
 
 ```
 $ bash setup-install.sh
 ```
 
-I also made a version of this [script for wsl2](). It doesn't contain the i3wm package and some graphical stuff.
+I also made a version of this [script for wsl2](https://github.com/aguiarjv/Linux-Configs/blob/main/wsl2/setup-install-wsl2.sh). It doesn't contain the i3wm package and some graphical stuff.
 
 ### Basic Shortcuts and Commands
 
