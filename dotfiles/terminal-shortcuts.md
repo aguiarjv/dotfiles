@@ -8,7 +8,7 @@ Here I'll be showing my personal shortcuts to use on the terminal (commands I sh
 
 * **Ctrl+l** clears terminal
 
-* **Ctrl+f** open fzf on my '/~/work' and '/~/personal' folders
+* **Ctrl+f** open fzf on my '\~/work' and '\~/personal' folders
 
 * **Ctrl+n** open fzf and then opens file on nvim
 
