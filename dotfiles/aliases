@@ -1,5 +1,15 @@
 # These lines should be added to the '.bashrc' or '.zshrc' file
-# the 'pacmd list-cards' command shows the possible outputs
 
+
+# The 'pacmd list-cards' command shows the possible outputs
+# these commands will change the audio output
 alias tv-audio='pacmd set-card-profile 1 off && pacmd set-card-profile 0 output:hdmi-stereo-extra2'
 alias hs-audio='pacmd set-card-profile 0 off && pacmd set-card-profile 1 output:analog-stereo+input:analog-stereo'
+
+# Binding ctrl+f to run the following script
+# works for zsh
+bindkey -s '^f' 'bash ~/dotfiles/personal/tmux\n'
+
+# Binding ctrl+n so we can open files on neovim using fzf
+# works for zsh
+bindkey -s '^n' 'nvim $(fzf)\n'
