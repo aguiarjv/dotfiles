@@ -14,6 +14,17 @@ Here I'll be saving and updating my current linux setup files and info.
 
 * i3 wm
 
+### Installation Script
+
+I made a very simple [installion script]() to setup everything as it should be.<br />
+Just download it and then:
+
+```
+$ bash setup-install.sh
+```
+
+I also made a version of this [script for wsl2](). It doesn't contain the i3wm package and some graphical stuff.
+
 ### Basic Shortcuts and Commands
 
 There are a few basic shortcuts and commands that you should know to have a better workflow. You can customize it as you please.<br />
