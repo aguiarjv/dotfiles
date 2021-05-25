@@ -14,7 +14,16 @@ Here I'll be saving and updating my current linux setup files and info.
 
 * i3 wm
 
-* To have everything running as it should, install: ripgrep, fzf, nodejs and check the other folders in this repo.
+### Basic Shortcuts and Commands
+
+There are a few basic shortcuts and commands that you should know to have a better workflow. You can customize it as you please.<br />
+I've made a few cheat sheets on the programs and shortcuts that I use:
+
+* **[nvim](./vim-config/remaps-list.md)** - leader key: **space**
+* **[tmux](./tmux/tmux-shortcuts.md)** - leader key: **ctrl-a**
+* **[i3wm](./i3/i3-shortcuts.md)** - leader key: **alt**
+* **[Terminal](./dotfiles/terminal-shortcuts.md)**
+
 
 ### Automatically Mount Partitions
 reference: [AutomaticallyMountPartitions](https://help.ubuntu.com/community/AutomaticallyMountPartitions) <br />

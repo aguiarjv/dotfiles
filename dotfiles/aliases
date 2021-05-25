@@ -13,3 +13,11 @@ bindkey -s '^f' 'bash ~/dotfiles/personal/tmux\n'
 # Binding ctrl+n so we can open files on neovim using fzf
 # works for zsh
 bindkey -s '^n' 'nvim $(fzf)\n'
+
+# After fzf is installed, these lines will add the standard key-bindings and
+# fzf auto completion. Check the files for more info
+# CTRL-T Paste the selected file path to command line
+# CTRL-R Paste the selected command from history into the command line
+# Alt-C cd into the selected directory
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
