@@ -1,6 +1,6 @@
 # Key Remaps
 This file includes the key remaps made for my vim configuration file
-* leader = space
+* **leader = space**
 
 ## VIM
 
