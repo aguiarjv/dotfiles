@@ -32,7 +32,7 @@ I've made a few cheat sheets on the programs and shortcuts that I use:
 
 * **[nvim](./vim-config/remaps-list.md)** - leader key: **space**
 * **[tmux](./tmux/tmux-shortcuts.md)** - leader key: **ctrl-a**
-* **[i3wm](./i3/i3-shortcuts.md)** - leader key: **alt**
+* **[i3wm](./i3/i3-shortcuts.md)** - leader key: **super**
 * **[Terminal](./dotfiles/terminal-shortcuts.md)**
 
 

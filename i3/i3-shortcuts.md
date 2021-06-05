@@ -1,7 +1,7 @@
 # i3 Shortcuts
 
 The i3 wm uses a mod key to execute its shortcuts. <br />
-I use the default i3 mod key: **alt**.
+I use the default i3 mod key: **super**.
 
 * **mod+Shift+e** exit i3 (logout)
 
