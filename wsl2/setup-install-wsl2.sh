@@ -5,18 +5,20 @@
 
 # Creating folders:
 
-sudo mkdir -p ~/personal/
-sudo mkdir -p ~/work/
-sudo mkdir -p ~/dotfiles/personal
+mkdir -p ~/personal/
+mkdir -p ~/work/
+mkdir -p ~/dotfiles/personal
 
-sudo mkdir -p ~/.config/nvim/
+mkdir -p ~/.config/nvim/
 
 # Installing necessary packages
 
-sudo apt install nvim tmux zsh -y
-sudo apt install fzf ripgrep nodejs -y
-sudo apt install htop -y
-sudo apt install ranger -y
+#sudo apt install nvim tmux zsh -y
+#sudo apt install fzf ripgrep nodejs -y
+#sudo apt install htop -y
+#sudo apt install ranger -y
+
+sudo apt install nvim tmux zsh fzf ripgrep nodejs htop ranger -y
 
 # Downloading config files from github
 

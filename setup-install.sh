@@ -5,13 +5,13 @@
 
 # Creating folders:
 
-sudo mkdir -p ~/personal/
-sudo mkdir -p ~/work/
-sudo mkdir -p ~/dotfiles/personal
+mkdir -p ~/personal/
+mkdir -p ~/work/
+mkdir -p ~/dotfiles/personal
 
-sudo mkdir -p ~/.config/i3/
-sudo mkdir -p ~/.config/i3status/
-sudo mkdir -p ~/.config/nvim/
+mkdir -p ~/.config/i3/
+mkdir -p ~/.config/i3status/
+mkdir -p ~/.config/nvim/
 
 sudo mkdir -p /media/victor/backup
 sudo mkdir -p /media/victor/windows
@@ -19,10 +19,12 @@ sudo mkdir -p /media/victor/usb
 
 # Installing necessary packages
 
-sudo apt install nvim tmux zsh i3 -y
-sudo apt install fzf ripgrep nodejs -y
-sudo apt install htop ntfs-3g xfce4-terminal -y
-sudo apt install ranger feh -y
+#sudo apt install nvim tmux zsh i3 -y
+#sudo apt install fzf ripgrep nodejs -y
+#sudo apt install htop ntfs-3g xfce4-terminal -y
+#sudo apt install ranger feh -y
+
+sudo apt install nvim tmux zsh i3 fzf ripgrep nodejs htop ntfs-3g xfce4-terminal ranger feh -y
 
 # Downloading config files from github
 
