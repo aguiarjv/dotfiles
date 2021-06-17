@@ -26,7 +26,7 @@ set undofile       " save changes into the file
 
 " TABS AND IDENTATION!
 set expandtab      " enter spaces when tab is pressed
-set textwidth=120  " break lines when line length increases
+set textwidth=200  " break lines when line length increases
 set tabstop=4      " use 4 spaces to represent tab
 set softtabstop=4
 set shiftwidth=4   " number of spaces to use for auto indent
@@ -172,8 +172,8 @@ vnoremap <leader>p "_dP
 " Opens a terminal window on the bottom side
 " i to use the terminal. type 'exit' to exit terminal
 " <Ctrl+\> <Ctrl+n> to exit insert mode in terminal
-nnoremap <leader>ptj :new term://zsh<bar> :wincmd J<bar> :resize 10<CR>
-nnoremap <leader>ptl :new term://zsh<bar> :wincmd L<bar> :vertical resize 50<CR>
+" nnoremap <leader>ptj :new term://zsh<bar> :wincmd J<bar> :resize 10<CR>
+" nnoremap <leader>ptl :new term://zsh<bar> :wincmd L<bar> :vertical resize 50<CR>
 
 " Change between split windows
 nnoremap <leader>h :wincmd h<CR>

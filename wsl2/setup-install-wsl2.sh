@@ -30,8 +30,12 @@ wget --no-check-certificate --content-disposition -O tmux https://raw.githubuser
 mv -f tmux ~/dotfiles/personal
 
 # tmux config
-wget --no-check-certificate --content-disposition -O .tmux.conf https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/tmux/.tmux.conf
+wget --no-check-certificate --content-disposition -O .tmux.conf https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/wsl2/.tmux.conf
 mv -f .tmux.conf ~/
+
+#.zshrc file
+wget --no-check-certificate --content-disposition -O .zshrc https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/wsl2/.zshrc
+mv -f .zshrc ~/
 
 # nvim init and coc-settings
 wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/vim-config/myconfig.vim
