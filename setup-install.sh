@@ -7,7 +7,7 @@
 
 mkdir -p ~/personal/
 mkdir -p ~/work/
-mkdir -p ~/dotfiles/personal
+mkdir -p ~/dotfiles/personal/zsh/
 
 mkdir -p ~/.config/i3/
 mkdir -p ~/.config/i3status/
@@ -29,14 +29,24 @@ sudo apt install nvim tmux zsh i3 fzf ripgrep nodejs htop ntfs-3g xfce4-terminal
 # Downloading config files from github
 
 # dotfiles
-wget --no-check-certificate --content-disposition -O aliases https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/dotfiles/aliases
-mv -f aliases ~/dotfiles/personal/
-
 wget --no-check-certificate --content-disposition -O monitor https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/dotfiles/monitor
 mv -f monitor ~/dotfiles/personal
 
 wget --no-check-certificate --content-disposition -O tmux https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/dotfiles/tmux
 mv -f tmux ~/dotfiles/personal
+
+# zsh files
+wget --no-check-certificate --content-disposition -O zshrc https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/zsh-config/zshrc
+mv -f zshrc ~/dotfiles/personal/zsh/
+
+wget --no-check-certificate --content-disposition -O zsh-aliases https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/zsh-config/zsh-aliases
+mv -f zsh-aliases ~/dotfiles/personal/zsh/
+
+wget --no-check-certificate --content-disposition -O zsh-functions https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/zsh-config/zsh-functions
+mv -f zsh-functions ~/dotfiles/personal/zsh/
+
+wget --no-check-certificate --content-disposition -O zsh-vim-mode https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/zsh-config/zsh-vim-mode
+mv -f zsh-vim-mode ~/dotfiles/personal/zsh/
 
 # i3 config and i3 status
 wget --no-check-certificate --content-disposition https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/i3/i3config
