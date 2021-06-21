@@ -21,6 +21,20 @@ I use **Ctrl+a** as the bind-key.
 
 * **tmux new-session -d -s "test" && tmux switch-client -t "test"** creates a new session named 'test' and switches to it
 
+### Resizing Panes
+
+* ** bindkey + : ** type :resize-pane -D
+
+* ** bindkey + : ** type :resize-pane -U
+
+* ** bindkey + : ** type :resize-pane -L
+
+* ** bindkey + : ** type :resize-pane -R
+
+* ** bindkey + : ** type :resize-pane -D 10 (Resizes down by 10 cells)
+
+* ** bindkey + Ctrl arrows **
+
 ### Shortcuts (using bind-key)
 
 * windows:
