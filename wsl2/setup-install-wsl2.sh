@@ -7,7 +7,7 @@
 
 mkdir -p ~/personal/
 mkdir -p ~/work/
-mkdir -p ~/dotfiles/personal/zsh/
+mkdir -p ~/dotfiles/zsh/
 
 mkdir -p ~/.config/nvim/
 
@@ -24,20 +24,20 @@ sudo apt install nvim tmux zsh fzf ripgrep nodejs htop ranger -y
 
 # dotfiles
 wget --no-check-certificate --content-disposition -O tmux https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/dotfiles/tmux
-mv -f tmux ~/dotfiles/personal
+mv -f tmux ~/dotfiles/
 
 # zsh files
 wget --no-check-certificate --content-disposition -O zshrc https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/zsh-config/zshrc
-mv -f zshrc ~/dotfiles/personal/zsh/
+mv -f zshrc ~/dotfiles/zsh/
 
 wget --no-check-certificate --content-disposition -O zsh-aliases https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/zsh-config/zsh-aliases
-mv -f zsh-aliases ~/dotfiles/personal/zsh/
+mv -f zsh-aliases ~/dotfiles/zsh/
 
 wget --no-check-certificate --content-disposition -O zsh-functions https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/zsh-config/zsh-functions
-mv -f zsh-functions ~/dotfiles/personal/zsh/
+mv -f zsh-functions ~/dotfiles/zsh/
 
 wget --no-check-certificate --content-disposition -O zsh-vim-mode https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/zsh-config/zsh-vim-mode
-mv -f zsh-vim-mode ~/dotfiles/personal/zsh/
+mv -f zsh-vim-mode ~/dotfiles/zsh/
 
 # tmux config
 wget --no-check-certificate --content-disposition -O .tmux.conf https://raw.githubusercontent.com/aguiarjv/Linux-Configs/main/wsl2/.tmux.conf

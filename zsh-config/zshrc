@@ -31,7 +31,7 @@ zle -N down-line-or-beginning-search
 autoload -Uz colors && colors
 
 # Useful Functions
-source "$HOME/dotfiles/personal/zsh/zsh-functions"
+source "$HOME/dotfiles/zsh/zsh-functions"
 
 # Normal files to source
 zsh_add_file "zsh-vim-mode"
@@ -51,7 +51,7 @@ bindkey "^j" down-line-or-beginning-search # Down
 
 # Binding ctrl+f to run the following script
 # works for zsh
-bindkey -s '^f' 'bash ~/dotfiles/personal/tmux^M'
+bindkey -s '^f' 'bash ~/dotfiles/tmux^M'
 
 # Binding ctrl+n so we can open files on neovim using fzf
 # works for zsh

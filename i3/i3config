@@ -212,7 +212,7 @@ for_window [class="^Steam$"] move to workspace 3
 # these will run once
 exec --no-startup-id i3-msg "workspace 2; exec brave-browser"
 exec --no-startup-id i3-msg "workspace 1; exec i3-sensible-terminal"
-exec --no-startup-id ~/dotfiles/personal/monitor
+exec --no-startup-id ~/dotfiles/monitor
 
 # Some configurations on startup
 # these will run with reload
