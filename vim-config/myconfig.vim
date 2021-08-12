@@ -157,9 +157,31 @@ nnoremap <leader>Y gg"+yG
 nnoremap <leader>P "+p
 vnoremap <leader>P "+p
 
+" Y behaving as it should (copying to the end of the line)
+nnoremap Y y$
+
+" When moving around cursor will be centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" Undo break points (when pressing 'u' will stop at a ',')
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+
+" Jumplist mutations
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+
 " Moving lines up and down
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+inoremap <C-j> <esc>:m .+1<CR>==
+inoremap <C-k> <esc>:m .-2<CR>==
+nnoremap <leader>k :m .-2<CR>==
+nnoremap <leader>j :m .+1<CR>==
 
 " Deletes and does not save into default register
 nnoremap <leader>d "_d
@@ -168,6 +190,10 @@ vnoremap <leader>d "_d
 " Replaces currently selected text with default register
 " without yanking it
 vnoremap <leader>p "_dP
+
+" Vertical resize
+nnoremap <Leader>+ :vertical resize +5<CR>
+nnoremap <Leader>- :vertical resize -5<CR>
 
 " Opens a terminal window on the bottom side
 " i to use the terminal. type 'exit' to exit terminal

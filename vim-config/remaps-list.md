@@ -10,6 +10,7 @@ This file includes the key remaps made for my vim configuration file
 
 * **J**  -> (vm) move line down on visual mode
 * **K**  -> (vm) move line up on visual mode
+* **\<leader>j**  -> move line up on normal mode
 
 * **\<leader>d = "_d**       -> deletes and does not save into default register
 * **\<leader>p = "_dP**      -> (vm) replaces currently selected text with default register without yanking it
