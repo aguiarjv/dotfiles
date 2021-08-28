@@ -4,13 +4,13 @@ These are my ZSH configuration files based on this [Youtube Video](https://www.y
 To have everything working properly the files should be placed on the following folder:
 
 ````
-$HOME/dotfiles/personal/zsh/
+$HOME/dotfiles/zsh/
 ````
 
 And the following line should be added to your .zshrc file:
 
 ````
-source $HOME/dotfiles/personal/zsh/zshrc
+source $HOME/dotfiles/zsh/zshrc
 ````
 
 The plugin 'zsh_autosuggetions' may cause some lagging. <br />
