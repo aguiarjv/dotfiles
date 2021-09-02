@@ -19,12 +19,12 @@ sudo mkdir -p /media/victor/usb
 
 # Installing necessary packages
 
-#sudo apt install nvim tmux zsh i3 -y
+#sudo apt install nvim tmux zsh i3 i3status dmenu -y
 #sudo apt install fzf ripgrep nodejs -y
 #sudo apt install htop ntfs-3g xfce4-terminal -y
 #sudo apt install ranger feh -y
 
-sudo apt install nvim tmux zsh i3 fzf ripgrep nodejs htop ntfs-3g xfce4-terminal ranger feh -y
+sudo apt install nvim tmux zsh i3 i3status dmenu fzf ripgrep nodejs htop ntfs-3g xfce4-terminal ranger feh -y
 
 # Downloading config files from github
 
