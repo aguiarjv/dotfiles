@@ -232,7 +232,7 @@ for_window [class="discord"] floating enable, border normal, resize set 480 800
 
 #exec --no-startup-id i3-msg "workspace 2; exec brave-browser"
 exec --no-startup-id i3-msg "workspace 1; exec i3-sensible-terminal"
-exec --no-startup-id ~/dotfiles/monitor
+exec --no-startup-id ~/dotfiles/monitor; feh --bg-scale ~/Pictures/OP-Wallpapers/wp1.jpg ~/Pictures/OP-Wallpapers/wp2.jpg
 
 # Some configurations on startup
 # these will run with reload
