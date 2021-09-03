@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $term xfce4-terminal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -41,7 +42,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -175,6 +176,14 @@ bindsym $mod+r mode "resize"
 # PERSONAL CONFIGS
 # ---------------------------
 
+# Setting Variables
+
+set $mon_1 DP-0
+set $mon_2 DVI-D-0
+set $mon_3 HDMI-0
+
+set $wpp_folder ~/Pictures
+
 # split in horizontal orientation
 bindsym $mod+b split h
 
@@ -208,12 +217,12 @@ for_window [class="^.*"] border pixel 2
 for_window [class="^.*"] client.focused          #77dd77 #285577 #ffffff #2e9ef4   #285577
 
 # Creating default workspaces to my monitors
-workspace 1 output DP-0
-workspace 2 output DP-0
-workspace 3 output DP-0
-workspace 4 output DP-0
-workspace 5 output DVI-D-0
-workspace 6 output HDMI-0
+workspace 1 output $mon_1
+workspace 2 output $mon_1
+workspace 3 output $mon_1
+workspace 4 output $mon_1
+workspace 5 output $mon_2
+workspace 6 output $mon_3
 
 # Discord and steam will always open on workspace 3
 assign [class="discord"] 3
@@ -231,9 +240,9 @@ for_window [class="discord"] floating enable, border normal, resize set 480 800
 # these will run once
 
 #exec --no-startup-id i3-msg "workspace 2; exec brave-browser"
-exec --no-startup-id i3-msg "workspace 1; exec i3-sensible-terminal"
-exec --no-startup-id ~/dotfiles/monitor; feh --bg-scale ~/Pictures/OP-Wallpapers/wp1.jpg ~/Pictures/OP-Wallpapers/wp2.jpg
+exec --no-startup-id i3-msg "workspace 1; exec $term"
+exec --no-startup-id ~/dotfiles/monitor; feh --bg-scale $wpp_folder/OP-Wallpapers/wp1.jpg $wpp_folder/OP-Wallpapers/wp2.jpg
 
 # Some configurations on startup
 # these will run with reload
-exec_always --no-startup-id feh --bg-scale ~/Pictures/OP-Wallpapers/wp8300034-one-piece-live-wallpapers.jpg ~/Pictures/OP-Wallpapers/wp5275838-one-piece-live-wallpapers.jpg
+exec_always --no-startup-id feh --bg-scale $wpp_folder/OP-Wallpapers/wp8300034-one-piece-live-wallpapers.jpg $wpp_folder/OP-Wallpapers/wp5275838-one-piece-live-wallpapers.jpg
