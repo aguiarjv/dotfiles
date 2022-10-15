@@ -14,7 +14,7 @@ cmp.setup {
     ["<C-d>"] = cmp.mapping.scroll_docs(-4),
     ["<C-u>"] = cmp.mapping.scroll_docs(4),
     ["<C-e>"] = cmp.mapping.abort(),
-    ["<CR>"] = cmp.mapping(
+    ["<C-y>"] = cmp.mapping(
       cmp.mapping.confirm {
         behavior = cmp.ConfirmBehavior.Insert,
         select = true,
@@ -62,7 +62,7 @@ cmp.setup {
     { name = "nvim_lua" },
 
     { name = "nvim_lsp" },
-    { name = "path" },
+    { name = "path", keyword_length = 3},
     { name = "luasnip" },
     { name = "buffer", keyword_length = 5 },
   },

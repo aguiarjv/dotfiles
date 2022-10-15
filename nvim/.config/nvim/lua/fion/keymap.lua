@@ -25,6 +25,8 @@ nnoremap("<leader>y", "\"+y")
 vnoremap("<leader>y", "\"+y")
 nmap("<leader>Y", "\"+Y")
 
+nnoremap("x", "\"_x")
+
 -- Deletes without saving to register
 nnoremap("<leader>d", "\"_d")
 vnoremap("<leader>d", "\"_d")
