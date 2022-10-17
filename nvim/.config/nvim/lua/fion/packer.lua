@@ -38,6 +38,8 @@ return require('packer').startup(function(use)
 
   use("simrat39/symbols-outline.nvim")
 
+  use ("lukas-reineke/indent-blankline.nvim")
+
   -- Colorschemes
   use 'folke/tokyonight.nvim'
   use 'gruvbox-community/gruvbox'
@@ -46,6 +48,8 @@ return require('packer').startup(function(use)
   'nvim-lualine/lualine.nvim',
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
+
+  -- use("norcalli/nvim-colorizer.lua")
 
   -- Treesitter
   use("nvim-treesitter/nvim-treesitter", {
@@ -59,5 +63,9 @@ return require('packer').startup(function(use)
   use("mfussenegger/nvim-dap")
   use("rcarriga/nvim-dap-ui")
   use("theHamsta/nvim-dap-virtual-text")
+
+  -- Git
+  -- use("dinhhuy258/git.nvim")
+  -- use("lewis6991/gitsigns.nvim")
 
 end)

@@ -1,4 +1,10 @@
 vim.opt.guicursor=""
+
+vim.opt.cursorline=true
+vim.opt.cursorlineopt="number"
+
+vim.opt.signcolumn="yes"
+
 vim.opt.showmatch=false
 
 vim.opt.errorbells=false

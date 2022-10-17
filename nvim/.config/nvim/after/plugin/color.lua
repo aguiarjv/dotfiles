@@ -1,12 +1,15 @@
 vim.g.tokyonight_transparent_sidebar = true
 vim.g.tokyonight_transparent = true
 
-vim.opt.background = "dark"
+vim.g.gruvbox_contrast_dark = 'hard'
+vim.g.gruvbox_invert_selection = '0'
 
+vim.opt.background = "dark"
 
 vim.cmd("colorscheme tokyonight-moon")
 
--- vim.cmd(":hi normal guibg=000000") -- Transparent background
+vim.cmd(":hi normal guibg=000000") -- Transparent background
+vim.cmd(":highlight SignColumn guibg=NONE") -- Transparent SignColumn
 
 
 -- Status line config
