@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+pacmd set-card-profile alsa_card.pci-0000_01_00.1 output:hdmi-stereo-extra1
+bash $HOME/scripts/mic-audio
+
