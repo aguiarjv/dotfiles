@@ -14,6 +14,8 @@ mkdir -p ~/work/
 mkdir -p ~/.config/i3/
 mkdir -p ~/.config/i3status/
 
+mkdir -p ~/Pictures/OP-Wallpapers/
+
 sudo mkdir -p /media/$USER_NAME/backup/
 sudo mkdir -p /media/$USER_NAME/windows/
 sudo mkdir -p /media/$USER_NAME/usb/
