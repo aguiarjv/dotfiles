@@ -5,15 +5,15 @@ Here I will describe what I am currently using and how to set it up.
 
 ## What do I use as my main workflow?
 
-* Font: Roboto Mono Medium
+- Font: Roboto Mono Medium
 
-* neovim
+- neovim
 
-* tmux
+- tmux
 
-* i3 wm
+- i3 wm
 
-* [Oh My Posh](https://ohmyposh.dev/)
+- [Oh My Posh](https://ohmyposh.dev/)
 
 ---
 
@@ -36,7 +36,7 @@ Here I will describe what I am currently using and how to set it up.
 
 
 ## Installation
-Installation on Ubuntu<br>
+**Installation on Ubuntu**<br>
 
 The installation is pretty simple. It will download and install some of the necessary sotfware and libs.
 It also will create my default directories and organize the files. To install simply follow:
@@ -53,6 +53,7 @@ After everything is installed some of the configurations should me changed as fo
 - The USER_NAME variable in the ``~/.tmux.conf`` to your current home user.
 - The ``~/scripts/monitor`` file should be changed to your current monitor settings.
 - The ``~/scripts/tv-audio``, ``~/scripts/mic-audio`` and ``~/scripts/set-audio-profiles`` files should be altered to your current audio settings.
+- To check your monitor settings use ``$ arandr``. ``$ pacmd list-cards`` and ``$ pacmd list-sinks`` might be helpful to check the audio settings.
 
 
 ## Basic Shortcuts and Commands
