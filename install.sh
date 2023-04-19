@@ -25,10 +25,10 @@ sudo mkdir -p /media/$USER_NAME/usb/
 
 #sudo apt install i3 i3status dmenu xfce4-terminal -y
 #sudo apt install tmux fzf ripgrep nodejs -y
-#sudo apt install htop ntfs-3g -y
+#sudo apt install htop ntfs-3g xclip -y
 #sudo apt install ranger feh build-essentials -y
 
-sudo apt install i3 i3status dmenu xfce4-terminal tmux fzf ripgrep nodejs htop ntfs-3g ranger feh build-essentials -y
+sudo apt install i3 i3status dmenu xfce4-terminal tmux fzf ripgrep nodejs htop ntfs-3g xclip ranger feh build-essentials -y
 
 
 # Moving files
