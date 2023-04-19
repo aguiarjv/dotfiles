@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
 pacmd set-card-profile alsa_card.pci-0000_01_00.1 output:hdmi-stereo-extra1
+pacmd set-default-source alsa_input.usb-fifine_Microphones_fifine_Microphone_REV1.0-00.analog-stereo
 bash $HOME/scripts/mic-audio
 
