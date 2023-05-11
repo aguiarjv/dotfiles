@@ -39,12 +39,12 @@ I use **Ctrl+a** as the bind-key.
 
 * windows:
   - **c** creates new window
+  - **shift+c** creates new window and renames it
   - **w** full view of sessions and windows
   - **f** find window
   - **n** next window
   - **p** previous window
   - **&** kill window
-  - **z** fullscreen the current pane
 
 * **x** kills a pane
 
@@ -100,13 +100,11 @@ Pressing **bind-key + [** places us in Copy mode. We can then use our movement k
 
 * **Shift+c** create new window and name it
 
-* **v** create new pane on the same current diretory and splits in vertical
+* **v** create new pane and splits in vertical
 
-* **b** create new pane on the same current directory and splits in horizontal
+* **b** create new pane and splits in horizontal
 
 * **r** reloads config
-
-* **Shift+n** creates new session on the current directory
 
 * pane change:
   - **^** last window
