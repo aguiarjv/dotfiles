@@ -13,6 +13,7 @@ mkdir -p ~/work/
 
 mkdir -p ~/.config/i3/
 mkdir -p ~/.config/i3status/
+mkdir -p ~/.config/nvim/
 
 mkdir -p ~/Pictures/OP-Wallpapers/
 
