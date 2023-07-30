@@ -32,7 +32,7 @@ sudo mkdir -p /media/$USER_NAME/usb/
 
 
 # Moving files
-cp -r $SCRIPT_DIR/nvim/.config/nvim ~/.config/
+#cp -r $SCRIPT_DIR/nvim/.config/nvim ~/.config/
 cp -r $SCRIPT_DIR/scripts/ $HOME
 cp -r $SCRIPT_DIR/.poshthemes/ $HOME
 
