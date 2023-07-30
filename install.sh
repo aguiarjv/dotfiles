@@ -26,7 +26,7 @@ sudo mkdir -p /media/$USER_NAME/usb/
 #sudo apt install i3 i3status dmenu thunar xfce4-terminal -y
 #sudo apt install tmux fzf ripgrep nodejs -y
 #sudo apt install htop ntfs-3g xclip -y
-#sudo apt install ranger feh build-essentials -y
+#sudo apt install ranger feh build-essential -y
 
 #sudo apt install i3 i3status dmenu thunar xfce4-terminal tmux fzf ripgrep nodejs htop ntfs-3g xclip ranger feh build-essential -y
 
@@ -34,6 +34,7 @@ sudo mkdir -p /media/$USER_NAME/usb/
 # Moving files
 cp -r $SCRIPT_DIR/nvim/.config/nvim ~/.config/
 cp -r $SCRIPT_DIR/scripts/ $HOME
+cp -r $SCRIPT_DIR/.poshthemes/ $HOME
 
 cp $SCRIPT_DIR/.bashrc $HOME
 cp $SCRIPT_DIR/tmux/.tmux.conf $HOME
