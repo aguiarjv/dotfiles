@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Simple script to check if there is a /venv folder in the current directory
+# it then sources it and clears the screen
+# It was made to be used with the tmux script
+
+DIR="$(pwd)"
+
+echo $DIR
+
+if [ -d "$DIR/venv" ]; then
+    source "$DIR/venv/bin/activate"
+fi
+
+clear
