@@ -5,15 +5,15 @@
       "alignment": "left",
       "segments": [
         {
-            "type": "python",
-            "style": "plain",
-            "foreground": "#eb6f92",
-            "template": " {{ .Full}} {{ .Venv }} "
+          "type": "python",
+          "style": "plain",
+          "foreground": "#eb6f92",
+          "template": " {{ .Full}} {{ .Venv }} "
         },
         {
           "foreground": "#eb6f92",
           "style": "plain",
-          "template": "\u279c",
+          "template": "\u279c ",
           "type": "text"
         },
         {
@@ -22,7 +22,7 @@
             "style": "folder"
           },
           "style": "plain",
-          "template": " {{ .Path }} ",
+          "template": "{{ .Path }} ",
           "type": "path"
         },
         {
