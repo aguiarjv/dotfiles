@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-
 # This script should install my linux configs
 # after gitclone the repo
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 USER_NAME="victor"
 
 # Creating Folders
@@ -20,16 +19,14 @@ sudo mkdir -p /media/$USER_NAME/backup/
 sudo mkdir -p /media/$USER_NAME/windows/
 sudo mkdir -p /media/$USER_NAME/usb/
 
-
 # Installing some of the necessary packages
 
 #sudo apt install i3 i3status dmenu thunar xfce4-terminal -y
 #sudo apt install tmux fzf ripgrep nodejs -y
 #sudo apt install htop ntfs-3g xclip -y
-#sudo apt install ranger feh build-essential -y
+#sudo apt install ranger feh build-essential fd-find -y
 
-#sudo apt install i3 i3status dmenu thunar xfce4-terminal tmux fzf ripgrep nodejs htop ntfs-3g xclip ranger feh build-essential -y
-
+#sudo apt install i3 i3status dmenu thunar xfce4-terminal tmux fzf ripgrep nodejs htop ntfs-3g xclip ranger feh build-essential fd-find -y
 
 # Moving files
 #cp -r $SCRIPT_DIR/nvim/.config/nvim ~/.config/
