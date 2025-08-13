@@ -302,3 +302,6 @@ input * {
     xkb_options grp:win_space_toggle
 }
 
+# Show nm-applet network manager
+exec_always nm-applet --indicator
+
