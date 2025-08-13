@@ -254,7 +254,7 @@ bindsym $mod+t exec $term
 bindsym $mod+Shift+q kill
 
 # Open the application launcher:
-bindsym $mod+space exec $menu
+#bindsym $mod+space exec $menu
 
 # Open the application launcher (alternate version):
 bindsym $mod+d exec $menu
@@ -294,3 +294,11 @@ include /etc/sway/config.d/*
 exec_always /usr/libexec/xdg-desktop-portal-wlr
 exec_always /usr/libexec/xdg-desktop-portal
 exec_always pkill -f xdg-desktop-portal-gtk
+
+# Keyboard layouts and windows + space to change it
+input * {
+    xkb_layout us,br,us
+    xkb_variant ,,intl
+    xkb_options grp:win_space_toggle
+}
+

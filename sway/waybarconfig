@@ -26,7 +26,7 @@
     // Choose the order of the modules
     "modules-center": ["sway/workspaces", "tray"],
     "modules-left": ["custom/hostname"],
-    "modules-right": [ "custom/audio","network","battery","clock"],
+    "modules-right": ["custom/kblayout","custom/audio","network","battery","clock"],
 
     // Configuration for individual modules
      "sway/workspaces": {
@@ -88,5 +88,12 @@
         "interval": "once",
         "on-click": "/usr/bin/rxvt -e /usr/bin/htop",
     },
+
+    "custom/kblayout": {
+        "exec": "~/.config/sway/kb-layout.sh",
+        "interval": 1,
+        "format": "{}",
+        "on-click": "~/.config/sway/kb-toggle.sh"
+    }
 }
 
