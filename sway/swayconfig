@@ -138,8 +138,8 @@ bindsym $mod+r mode "resize"
 # Switch to workspace
 set $ws1 "1 - Terminal"
 set $ws2 "2 - Browser"
-set $ws3 "3 - Communication"
-set $ws4 "4 - Misc"
+set $ws3 "3 - Code"
+set $ws4 "4 - Coms"
 set $ws5 "5 - Media"
 set $ws6 "6 - Writing"
 set $ws7 "7 - Homelab"
@@ -195,6 +195,9 @@ bindsym $mod+tab focus mode_toggle
 # Move focus to the parent container
 bindsym $mod+a focus parent
 
+# Printscreen area
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
+
 
 #=================================#
 # Keyboard Shortcuts (Scratchpad) #
@@ -226,6 +229,9 @@ bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle; pkill -RT
 # Brightness
 bindsym XF86MonBrightnessDown exec light -U 10
 bindsym XF86MonBrightnessUp exec light -A 10
+
+# Audio control panel with pavucontrol
+bindsym $mod+Shift+a exec pavucontrol
 
 
 #=============================================#
@@ -262,12 +268,20 @@ exec swaymsg "workspace $ws1; exec $term"
 
 # Setting monitors
 set $mon_1 HDMI-A-1 
+set $mon_2 DP-1
+
+# output HDMI-A-1 pos 3840 2210 res 2560x1440
+# output DP-1 pos 1920 2410 res 1920x1080
+# output eDP-1 disable
 
 # Workspaces organization
 workspace $ws1 output $mon_1
 workspace $ws2 output $mon_1
 workspace $ws3 output $mon_1
 workspace $ws4 output $mon_1
+workspace $ws5 output $mon_2
+workspace $ws6 output $mon_2
+workspace $ws7 output $mon_2
 
 # Turning off laptop monitor when lid is down
 bindswitch lid:on output eDP-1 disable
@@ -275,3 +289,8 @@ bindswitch lid:off output eDP-1 enable
 
 include /etc/sway/config-vars.d/*
 include /etc/sway/config.d/*
+
+# Always killing gtk portal to enable screen sharing with wlr
+exec_always /usr/libexec/xdg-desktop-portal-wlr
+exec_always /usr/libexec/xdg-desktop-portal
+exec_always pkill -f xdg-desktop-portal-gtk

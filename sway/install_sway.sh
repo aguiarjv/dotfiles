@@ -12,7 +12,9 @@ SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 #sudo apt install sway swaybg swayidle sawyimg swaylock sway-notification-center -y
 #sudo apt install light waybar wofi fonts-font-awesome wdisplays thunar -y
 #sudo apt install pavucontrol -y
-#sudo apt install sway swaybg swayidle swayimg swaylock sway-notification-center light waybar wofi fonts-font-awesome wdisplays thunar pavucontrol -y
+#sudo apt install grim slurp wl-clipboard -y
+#sudo apt install pipewire wireplumber xdg-desktop-portal xdg-desktop-portal-wlr -y
+#sudo apt install sway swaybg swayidle swayimg swaylock sway-notification-center light waybar wofi fonts-font-awesome wdisplays thunar pavucontrol grim slurp wl-clipboard pipewire wireplumber xdg-desktop-portal xdg-desktop-portal-wlr -y
 
 # Moving files
 cp $SCRIPT_DIR/swayconfig ~/.config/sway/config
