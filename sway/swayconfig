@@ -291,9 +291,16 @@ include /etc/sway/config-vars.d/*
 include /etc/sway/config.d/*
 
 # Always killing gtk portal to enable screen sharing with wlr
+exec_always dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
+exec_always systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+
+exec_always systemctl --user mask --now xdg-desktop-portal-gtk.service
+
+exec_always pkill -f xdg-desktop-portal
+exec_always pkill -f xdg-desktop-portal-gtk
+exec_always pkill -f xdg-desktop-portal-wlr
 exec_always /usr/libexec/xdg-desktop-portal-wlr
 exec_always /usr/libexec/xdg-desktop-portal
-exec_always pkill -f xdg-desktop-portal-gtk
 
 # Keyboard layouts and windows + space to change it
 input * {
