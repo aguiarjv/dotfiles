@@ -42,7 +42,7 @@
 
     "clock": {
         "timezone": "America/Sao_Paulo",
-        "format": "{:%H:%M}",
+        "format": "  {:%H:%M | %a}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}",
     },
@@ -54,7 +54,7 @@
             "critical": 15,
         },
         "format": "{icon}  {capacity}%",
-        "format-charging": "⚡ {capacity}%",
+        "format-charging": "⚡{capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -92,19 +92,19 @@
     "custom/kblayout": {
         "exec": "~/.config/sway/kb-layout.sh",
         "interval": 1,
-        "format": "{}",
+        "format": "  {}",
         "on-click": "~/.config/sway/kb-toggle.sh"
     },
 
     "cpu": {
         "interval": 2,
-        "format": " {usage}%",
+        "format": "  {usage}%",
         "tooltip-format": "CPU: {usage}%"
     },
 
     "memory": {
         "interval": 5,
-        "format": " {used:0.1f}G / {total:0.1f}G",
+        "format": "  {used:0.1f}G / {total:0.1f}G",
         "tooltip-format": "RAM used: {used:0.1f}G\nAvailable: {avail:0.1f}G\nTotal: {total:0.1f}G"
     }
 }
