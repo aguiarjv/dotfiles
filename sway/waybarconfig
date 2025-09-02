@@ -92,7 +92,7 @@
     "custom/kblayout": {
         "exec": "~/.config/sway/kb-layout.sh",
         "interval": 1,
-        "format": "  {}",
+        "format": "  {}",
         "on-click": "~/.config/sway/kb-toggle.sh"
     },
 
