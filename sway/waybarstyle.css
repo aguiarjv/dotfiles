@@ -132,3 +132,13 @@ button:hover {
   padding-left: 6px;
   padding-right: 6px;
 }
+
+#cpu {
+  color: @peach;
+  border-bottom: 2px solid @peach;
+}
+
+#memory {
+  color: @sapphire;
+  border-bottom: 2px solid @sapphire;
+}
