@@ -88,13 +88,13 @@ button:hover {
 }
 
 #custom-audio {
-  color: @blue;
-  border-bottom: 2px solid @blue;
+  color: @mauve;
+  border-bottom: 2px solid @mauve;
 }
 
 #custom-kblayout {
-  color: @mauve;
-  border-bottom: 2px solid @mauve;
+  color: @blue;
+  border-bottom: 2px solid @blue;
 }
 
 #network {

@@ -26,7 +26,7 @@
     // Choose the order of the modules
     "modules-center": ["sway/workspaces", "tray"],
     "modules-left": ["custom/hostname"],
-    "modules-right": ["cpu","memory","custom/kblayout","custom/audio","network","battery","clock"],
+    "modules-right": ["cpu","memory","custom/audio","network","battery","custom/kblayout","clock"],
 
     // Configuration for individual modules
      "sway/workspaces": {
