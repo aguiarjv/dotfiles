@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Get volume using pactl
+# --- Volume & mute ---
 muted=$(/usr/bin/pactl get-sink-mute @DEFAULT_SINK@ | sed 's/Mute: //')
 volume=$(/usr/bin/pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '\d+(?=%)' | head -n 1)
 current_volume=""
@@ -21,18 +21,40 @@ fi
 #     volume="${volume:1}"
 # fi
 
+# --- Main icon and text ---
 if [[ $current_volume == *"MUTED"* ]]; then
-    echo "  ---"
+    icon=""
+    text="---"
 elif [ "$volume" -gt "99" ]; then
-    echo "  $volume%"
+    icon=""
+    text="$volume%"
 elif [ "$volume" -gt "65" ]; then
-    echo "  $volume%"
+    icon=""
+    text="$volume%"
 elif [ "$volume" -gt "30" ]; then
-    echo "  $volume%"
-elif [ "$volume" -gt "10" ]; then
-    echo "  $volume%"
+    icon=""
+    text="$volume%"
 elif [ "$volume" -gt "0" ]; then
-    echo "  $volume%"
-elif [ "$volume" -lt "1" ]; then
-    echo "  ---"
+    icon=""
+    text="$volume%"
+else
+    icon=""
+    text="---"
 fi
+
+# --- Output device---
+output=$(pactl get-default-sink)
+output_desc=$(pactl list sinks | awk -v dev="$output" '
+  $0 ~ "Name: "dev {found=1}
+  found && /Description:/ {print substr($0, index($0,$2)); exit}
+')
+
+# --- Input device---
+input=$(pactl get-default-source)
+input_desc=$(pactl list sources | awk -v dev="$input" '
+  $0 ~ "Name: "dev {found=1}
+  found && /Description:/ {print substr($0, index($0,$2)); exit}
+')
+
+# --- Returning json to waybar ---
+echo "{\"text\": \"$icon $text\", \"tooltip\": \" Output: $output_desc\n Input: $input_desc\"}"

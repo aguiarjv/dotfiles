@@ -74,9 +74,11 @@
     },
 
     "custom/audio": {
-        "format": "{}",
+        "format": "{0}",
+        "tooltip-format": "{1}",
         "signal": 8,
         "interval": "once",
+        "return-type": "json",
         "exec": "~/.config/sway/audio.sh",
         "on-click": "/bin/bash ~/.config/sway/mute_audio.sh",
         "on-click-right": "pavucontrol",
@@ -108,3 +110,4 @@
         "tooltip-format": "RAM used: {used:0.1f}G\nAvailable: {avail:0.1f}G\nTotal: {total:0.1f}G"
     }
 }
+
