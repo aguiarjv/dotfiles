@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Pick a folder under ~/work or ~/personal, up to three levels deep,
+# or pass a folder directly. Herdr must already be running.
+# Inside Herdr, switch workspaces; outside Herdr, attach after switching.
+
+if [[ $# -gt 1 ]]; then
+    printf 'Usage: %s [folder]\n' "${0##*/}" >&2
+    exit 2
+fi
+if [[ ${1:-} == --help || ${1:-} == -h ]]; then
+    printf 'Usage: %s [folder]\nSelect a folder and create or focus its workspace in a running Herdr session.\n' "${0##*/}"
+    exit 0
+fi
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    command -v fzf >/dev/null || { printf 'fzf is required.\n' >&2; exit 1; }
+    roots=()
+    for root in "$HOME/work" "$HOME/personal"; do
+        [[ ! -d $root ]] || roots+=("$root")
+    done
+    if [[ ${#roots[@]} -eq 0 ]]; then
+        printf 'No ~/work or ~/personal directory found.\n' >&2
+        exit 1
+    fi
+    # NUL delimiters preserve spaces and newlines in folder names.
+    IFS= read -r -d '' selected < <(
+        find "${roots[@]}" -maxdepth 3 -mindepth 1 -type d -print0 |
+            sort -z | fzf --read0 --print0 --prompt='Herdr workspace > '
+    ) || exit 0
+fi
+
+if [[ ! -d $selected ]]; then
+    printf 'Not a directory: %s\n' "$selected" >&2
+    exit 1
+fi
+selected=$(cd -- "$selected" && pwd -P)
+for dependency in herdr jq; do
+    command -v "$dependency" >/dev/null || { printf '%s is required.\n' "$dependency" >&2; exit 1; }
+done
+
+if ! panes=$(herdr pane list); then
+    printf 'Could not reach Herdr. Start herdr first, then run this script in that session.\n' >&2
+    exit 1
+fi
+# Match the directory rather than the label: different projects can share a name.
+workspace_id=$(jq -r --arg cwd "$selected" '
+    [.result.panes[] | select(.cwd == $cwd) | .workspace_id][0] // empty
+' <<< "$panes")
+
+if [[ -n $workspace_id ]]; then
+    herdr workspace focus "$workspace_id" >/dev/null
+else
+    herdr workspace create --cwd "$selected" --label "${selected##*/}" --focus >/dev/null
+fi
+
+if [[ ${HERDR_ENV:-} != 1 ]]; then
+    exec herdr
+fi
