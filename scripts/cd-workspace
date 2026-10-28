@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+# Source this script to change the current shell's directory:
+# source ~/scripts/cd-workspace [folder]
+
+if [[ ${BASH_SOURCE[0]} == "$0" ]]; then
+    printf 'Source this script to change your current directory:\n  source %q [folder]\n' "$0" >&2
+    exit 1
+fi
+
+_cd_workspace() {
+    # Remove the helper while it runs, preserving its eventual exit status.
+    unset -f _cd_workspace
+    local selected root picker_pid picker_status=0
+    local -a roots=()
+
+    if [[ $# -gt 1 ]]; then
+        printf 'Usage: source ~/scripts/cd-workspace [folder]\n' >&2
+        return 1
+    fi
+    if [[ ${1:-} == --help || ${1:-} == -h ]]; then
+        printf 'Usage: source ~/scripts/cd-workspace [folder]\nSelect a folder under ~/work or ~/personal and change into it.\n'
+        return 0
+    fi
+
+    if [[ $# -eq 1 ]]; then
+        selected=$1
+    else
+        command -v fzf >/dev/null || { printf 'fzf is required.\n' >&2; return 1; }
+        for root in "$HOME/work" "$HOME/personal"; do
+            [[ ! -d $root ]] || roots+=("$root")
+        done
+        if [[ ${#roots[@]} -eq 0 ]]; then
+            printf 'No ~/work or ~/personal directory found.\n' >&2
+            return 1
+        fi
+        # NUL delimiters preserve spaces and newlines in folder names.
+        IFS= read -r -d '' selected < <(
+            # Capture fzf's status regardless of the caller's pipefail setting.
+            set +o pipefail
+            find "${roots[@]}" -maxdepth 3 -mindepth 1 -type d -print0 |
+                sort -z | fzf --read0 --print0 --prompt='Change directory > '
+        ) || :
+        picker_pid=$!
+        wait "$picker_pid" || picker_status=$?
+        case $picker_status in
+            0) [[ -n $selected ]] || return 0 ;;
+            1|130) return 0 ;; # No match or cancellation.
+            *) return "$picker_status" ;;
+        esac
+    fi
+
+    if [[ ! -d $selected ]]; then
+        printf 'Not a directory: %s\n' "$selected" >&2
+        return 1
+    fi
+    CDPATH= builtin cd -- "$selected"
+}
+
+_cd_workspace "$@"
