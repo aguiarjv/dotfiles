@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 
-# Source this script to change the current shell's directory:
-# source ~/scripts/cd-workspace [folder]
-
-if [[ ${BASH_SOURCE[0]} == "$0" ]]; then
-    printf 'Source this script to change your current directory:\n  source %q [folder]\n' "$0" >&2
-    exit 1
-fi
+# Pick a folder like the tmux launcher. When executed, print the selection
+# for the shell shortcut to cd into. Sourcing still changes directories directly.
 
 _cd_workspace() {
     # Remove the helper while it runs, preserving its eventual exit status.
@@ -15,11 +10,11 @@ _cd_workspace() {
     local -a roots=()
 
     if [[ $# -gt 1 ]]; then
-        printf 'Usage: source ~/scripts/cd-workspace [folder]\n' >&2
+        printf 'Usage: cd-workspace [folder]\n' >&2
         return 1
     fi
     if [[ ${1:-} == --help || ${1:-} == -h ]]; then
-        printf 'Usage: source ~/scripts/cd-workspace [folder]\nSelect a folder under ~/work or ~/personal and change into it.\n'
+        printf 'Usage: cd-workspace [folder]\nSelect a folder under ~/work or ~/personal.\n'
         return 0
     fi
 
@@ -54,7 +49,11 @@ _cd_workspace() {
         printf 'Not a directory: %s\n' "$selected" >&2
         return 1
     fi
-    CDPATH= builtin cd -- "$selected"
+    if [[ ${BASH_SOURCE[0]} == "$0" ]]; then
+        printf '%s\n' "$selected"
+    else
+        CDPATH= builtin cd -- "$selected"
+    fi
 }
 
 _cd_workspace "$@"

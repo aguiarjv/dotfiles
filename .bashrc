@@ -135,7 +135,17 @@ bind -x '"\C-f":"~/scripts/tmux"'
 
 # Pick a workspace directory in the current shell with Alt+C.
 cd-workspace() {
-    source "$HOME/scripts/cd-workspace" "$@"
+    local selected
+    if [[ ${1:-} == --help || ${1:-} == -h ]]; then
+        "$HOME/scripts/cd-workspace" "$@"
+        return
+    fi
+    # Keep trailing newlines in directory names through command substitution.
+    selected=$("$HOME/scripts/cd-workspace" "$@" && printf '.') || return
+    selected=${selected%.}
+    selected=${selected%$'\n'}
+    [[ -n $selected ]] || return 0
+    CDPATH= builtin cd -- "$selected"
 }
 bind -x '"\ec":"cd-workspace"'
 
