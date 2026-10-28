@@ -133,7 +133,7 @@ alias mic-audio="~/scripts/mic-audio"
 # Binding ctrl+f to run the following script
 bind -x '"\C-f":"~/scripts/tmux"'
 
-# Pick a workspace directory in the current shell with Alt+C.
+# Pick a workspace directory in the current shell.
 cd-workspace() {
     local selected
     if [[ ${1:-} == --help || ${1:-} == -h ]]; then
@@ -147,7 +147,9 @@ cd-workspace() {
     [[ -n $selected ]] || return 0
     CDPATH= builtin cd -- "$selected"
 }
-bind -x '"\ec":"cd-workspace"'
+# Submit the command through Readline so Oh My Posh refreshes after cd.
+bind '"\ec":"\C-a\C-k source ~/scripts/cd-workspace\C-m"'
+bind '"\C-h":"\C-a\C-k source ~/scripts/cd-workspace\C-m"'
 
 # Binding ctrl+n so we can open files on neovim using fzf
 bind -x '"\C-n":"nvim $(fzf)"'
