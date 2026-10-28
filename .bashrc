@@ -133,6 +133,12 @@ alias mic-audio="~/scripts/mic-audio"
 # Binding ctrl+f to run the following script
 bind -x '"\C-f":"~/scripts/tmux"'
 
+# Pick a workspace directory in the current shell with Alt+C.
+cd-workspace() {
+    source "$HOME/scripts/cd-workspace" "$@"
+}
+bind -x '"\ec":"cd-workspace"'
+
 # Binding ctrl+n so we can open files on neovim using fzf
 bind -x '"\C-n":"nvim $(fzf)"'
 
